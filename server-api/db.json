@@ -1,0 +1,29 @@
+{
+  "contacts": [
+    {
+      "id": "tu43LrAfRnOZ5K6bcipXb",
+      "name": "rashmi",
+      "email": "r@gmail.com"
+    },
+    {
+      "id": "54DUhmMjTgbj94ZXTsRmD",
+      "name": "debu",
+      "email": "d@gmail.com"
+    },
+    {
+      "id": "gY06TDNd1zkR71lpfSydO",
+      "name": "andy",
+      "email": "andy@gmail.com"
+    },
+    {
+      "id": "4W8uwYlpzhQY8UEXXQU3u",
+      "name": "dylan",
+      "email": "dylan@gmail.com"
+    },
+    {
+      "id": "7xzCuBIbzYGGAv9dn-B5Q",
+      "name": "lexi",
+      "email": "l@gmail.com"
+    }
+  ]
+}
