@@ -1,18 +1,36 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import api from '../api/contacts';
 
 const EditContact = (props) => {
   const navigate = useNavigate();
 
   // const { id, name, email } = props.location.state.contact;
  
+  const { state: {contact} }=useLocation();
+
   const [state, setState] = useState({
-    id: props.id,
-    name: props.name,
-    email: props.email,
+    id: '',
+    name: '',
+    email: '',
   });
 
-  console.log(state.name);
+  useEffect(() => {
+    async function getContactDetails() {
+      const response = await api.put(
+        `/contacts/${contact.id}`,
+        contact
+      );
+
+      setState({
+        id: response.data.id,
+        name: response.data.name,
+        email: response.data.email,
+      });
+    }
+
+    getContactDetails();
+  }, [contact]);
 
   const update = (e) => {
     e.preventDefault();
